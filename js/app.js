@@ -30,7 +30,7 @@
         }
 
         // Fetch API
-        fetch('/api/v1/attachment-upload', {
+        fetch('/api/v1/attachmentfile-upload', {
             method: 'POST',
             body: formData,
         })
