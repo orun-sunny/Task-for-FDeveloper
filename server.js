@@ -41,18 +41,37 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Route End Point
+
 app.post('/api/v1/attachmentfile-upload', upload.array('attachments'), (req, res, next) => {
     console.log(req.files, req.body);
     UserModel.create({ attachement: req.files.filename })
-        .then(result => res.json(result))
-        .catch(err => console.log(err));
-    const filenames = req.files.map(file => file.filename);
-    res.json({
-        message: 'File Uploaded!',
-        status: 'success',
-        filenames,
-    })
-})
+        .then(result => {
+            const filenames = req.files.map(file => file.filename);
+            res.json({
+                message: 'File Uploaded!',
+                status: 'success',
+                filenames,
+                result  // Include the result from UserModel.create if needed
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({ error: 'Internal Server Error' });
+        });
+});
+
+// app.post('/api/v1/attachmentfile-upload', upload.array('attachments'), (req, res, next) => {
+//     console.log(req.files, req.body);
+//     UserModel.create({ attachement: req.files.filename })
+//         .then(result => res.json(result))
+//         .catch(err => console.log(err));
+//     const filenames = req.files.map(file => file.filename);
+//     res.json({
+//         message: 'File Uploaded!',
+//         status: 'success',
+//         filenames,
+//     })
+// })
 
 
 //->Show UI...
