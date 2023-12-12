@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEOPage1</title>
+    <link rel="stylesheet" href="js/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Design Card 01 -->
+      <div class="card-wrapper">
+        <div class="card-wrapper-header flex-between">
+          <div class="incomplete-icon">
+            <h4>Incomplete</h4>
+          </div>
+
+          <div class="count">10</div>
+        </div>
+        <div class="card-list-wrapper">
+          <!-- Generate cards dynamically -->
+          <script>
+            // Function to generate a card with given data
+            function generateCard(
+              clientImage,
+              clientName,
+              userImage,
+              userName,
+              taskDetails,
+              taskCount,
+              memberCount,
+              messageCount,
+              attachmentCount,
+              date
+            ) {
+              document.write(`
+                <div class="card">
+                  <div class="card-header flex-between">
+                    <div class="client flex-center">
+                      <img src="${clientImage}" class="avatar" alt="persion-1"/>
+                      <h5>${clientName}</h5>
+                    </div>
+                    <div class="user flex-center">
+                      <img src="${userImage}" class="avatar" alt="persion-1"/>
+                      <h5>${userName}</h5>
+                    </div>
+                  </div>
+                  <div class="card-body flex-between">
+                    <div class="task-details flex-center">
+                      <img src="public/images/stack.svg" alt="" />
+                      <span>${taskDetails}</span>
+                    </div>
+                    <div class="task-count flex-center">
+                      <img src="public/images/task.svg" alt="" />
+                      <span>${taskCount}</span>
+                    </div>
+                  </div>
+                  <div class="card-footer flex-between">
+                    <div class="flex-center">
+                      <img src="${clientImage}" class="avatar" alt="" />
+                      <img src="${userImage}" class="avatar" alt="" />
+                      <span class="avatar member-count flex-center">${memberCount}</span>
+                    </div>
+                    <div class="message flex-center">
+                      <img src="public/images/chat.svg" alt="" />
+                      <span>${messageCount}</span>
+                    </div>
+                    <button class="flex-center attachmentup-btn">
+                      <img src="public/images/paper-clip.svg" alt="" />
+                      <span>${attachmentCount}</span>
+                    </button>
+                    <div class="date flex-center">
+                      <img src="public/images/calender.svg" alt="" />
+                      <span>${date}</span>
+                    </div>
+                  </div>
+                </div>
+              `);
+            }
+
+            // Example usage
+            for (let i = 0; i < 10; i++) {
+              generateCard(
+                "public/images/client.png",
+                "Orun-sunny",
+                "public/images/client2.png",
+                "Client",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, eligendi!",
+                "1/2",
+                "12+",
+                "15",
+                "25",
+                "30-12-2022"
+              );
+            }
+          </script>
+        </div>
+      </div>
+      <!-- Parent Card 02 -->
+
+      <div class="card-wrapper">
+        <div class="card-wrapper-header flex-between">
+          <h4>To Do</h4>
+          <div class="count">10</div>
+        </div>
+        <div class="card-list-wrapper">
+          <!-- Generate cards dynamically -->
+          <script>
+            // Function to generate a card with given data
+            function generateCard(
+              clientImage,
+              clientName,
+              userImage,
+              userName,
+              taskDetails,
+              taskCount,
+              memberCount,
+              messageCount,
+              attachmentCount,
+              date
+            ) {
+              document.write(`
+                <div class="card">
+                  <div class="card-header flex-between">
+                    <div class="client flex-center">
+                      <img src="${clientImage}" class="avatar" alt="persion-1"/>
+                      <h5>${clientName}</h5>
+                    </div>
+                    <div class="user flex-center">
+                      <img src="${userImage}" class="avatar" alt="persion-1"/>
+                      <h5>${userName}</h5>
+                    </div>
+                  </div>
+                  <div class="card-body flex-between">
+                    <div class="task-details flex-center">
+                      <img src="public/images/stack.svg" alt="" />
+                      <span>${taskDetails}</span>
+                    </div>
+                    <div class="task-count flex-center">
+                      <img src="public/images/task.svg" alt="" />
+                      <span>${taskCount}</span>
+                    </div>
+                  </div>
+                  <div class="card-footer flex-between">
+                    <div class="flex-center">
+                      <img src="${clientImage}" class="avatar" alt="" />
+                      <img src="${userImage}" class="avatar" alt="" />
+                      <span class="avatar member-count flex-center">${memberCount}</span>
+                    </div>
+                    <div class="message flex-center">
+                      <img src="public/images/chat.svg" alt="" />
+                      <span>${messageCount}</span>
+                    </div>
+                    <button class="flex-center attachmentup-btn">
+                      <img src="public/images/paper-clip.svg" alt="" />
+                      <span>${attachmentCount}</span>
+                    </button>
+                    <div class="date flex-center">
+                      <img src="public/images/calender.svg" alt="" />
+                      <span>${date}</span>
+                    </div>
+                  </div>
+                </div>
+              `);
+            }
+
+            // Example usage
+            for (let i = 0; i < 10; i++) {
+              generateCard(
+                "public/images/client.png",
+                "Orun-sunny",
+                "public/images/client2.png",
+                "Client",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, eligendi!",
+                "1/2",
+                "12+",
+                "15",
+                "25",
+                "30-12-2022"
+              );
+            }
+          </script>
+        </div>
+      </div>
+
+      <!-- Parent Card 03 -->
+      <div class="card-wrapper">
+        <div class="card-wrapper-header flex-between">
+          <h4>Doing</h4>
+          <div class="count">10</div>
+        </div>
+        <div class="card-list-wrapper">
+          <!-- Generate cards dynamically -->
+          <script>
+            // Function to generate a card with given data
+            function generateCard(
+              clientImage,
+              clientName,
+              userImage,
+              userName,
+              taskDetails,
+              taskCount,
+              memberCount,
+              messageCount,
+              attachmentCount,
+              date
+            ) {
+              document.write(`
+                <div class="card">
+                  <div class="card-header flex-between">
+                    <div class="client flex-center">
+                      <img src="${clientImage}" class="avatar" alt="persion-1"/>
+                      <h5>${clientName}</h5>
+                    </div>
+                    <div class="user flex-center">
+                      <img src="${userImage}" class="avatar" alt="persion-1"/>
+                      <h5>${userName}</h5>
+                    </div>
+                  </div>
+                  <div class="card-body flex-between">
+                    <div class="task-details flex-center">
+                      <img src="public/images/stack.svg" alt="" />
+                      <span>${taskDetails}</span>
+                    </div>
+                    <div class="task-count flex-center">
+                      <img src="public/images/task.svg" alt="" />
+                      <span>${taskCount}</span>
+                    </div>
+                  </div>
+                  <div class="card-footer flex-between">
+                    <div class="flex-center">
+                      <img src="${clientImage}" class="avatar" alt="" />
+                      <img src="${userImage}" class="avatar" alt="" />
+                      <span class="avatar member-count flex-center">${memberCount}</span>
+                    </div>
+                    <div class="message flex-center">
+                      <img src="public/images/chat.svg" alt="" />
+                      <span>${messageCount}</span>
+                    </div>
+                    <button class="flex-center attachmentup-btn">
+                      <img src="public/images/paper-clip.svg" alt="" />
+                      <span>${attachmentCount}</span>
+                    </button>
+                    <div class="date flex-center">
+                      <img src="public/images/calender.svg" alt="" />
+                      <span>${date}</span>
+                    </div>
+                  </div>
+                </div>
+              `);
+            }
+
+            // Example usage
+            for (let i = 0; i < 10; i++) {
+              generateCard(
+                "public/images/client.png",
+                "Orun-sunny",
+                "public/images/client2.png",
+                "Client",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, eligendi!",
+                "1/2",
+                "12+",
+                "15",
+                "25",
+                "30-12-2022"
+              );
+            }
+          </script>
+        </div>
+      </div>
+
+      <!-- Parent Card 04 -->
+      <div class="card-wrapper">
+        <div class="card-wrapper-header flex-between">
+          <h4>Under Review</h4>
+          <div class="count">10</div>
+        </div>
+        <div class="card-list-wrapper">
+          <!-- Generate cards dynamically -->
+          <script>
+            // Function to generate a card with given data
+            function generateCard(
+              clientImage,
+              clientName,
+              userImage,
+              userName,
+              taskDetails,
+              taskCount,
+              memberCount,
+              messageCount,
+              attachmentCount,
+              date
+            ) {
+              document.write(`
+                <div class="card">
+                  <div class="card-header flex-between">
+                    <div class="client flex-center">
+                      <img src="${clientImage}" class="avatar" alt="persion-1"/>
+                      <h5>${clientName}</h5>
+                    </div>
+                    <div class="user flex-center">
+                      <img src="${userImage}" class="avatar" alt="persion-1"/>
+                      <h5>${userName}</h5>
+                    </div>
+                  </div>
+                  <div class="card-body flex-between">
+                    <div class="task-details flex-center">
+                      <img src="public/images/stack.svg" alt="" />
+                      <span>${taskDetails}</span>
+                    </div>
+                    <div class="task-count flex-center">
+                      <img src="public/images/task.svg" alt="" />
+                      <span>${taskCount}</span>
+                    </div>
+                  </div>
+                  <div class="card-footer flex-between">
+                    <div class="flex-center">
+                      <img src="${clientImage}" class="avatar" alt="" />
+                      <img src="${userImage}" class="avatar" alt="" />
+                      <span class="avatar member-count flex-center">${memberCount}</span>
+                    </div>
+                    <div class="message flex-center">
+                      <img src="public/images/chat.svg" alt="" />
+                      <span>${messageCount}</span>
+                    </div>
+                    <button class="flex-center attachmentup-btn">
+                      <img src="public/images/paper-clip.svg" alt="" />
+                      <span>${attachmentCount}</span>
+                    </button>
+                    <div class="date flex-center">
+                      <img src="public/images/calender.svg" alt="" />
+                      <span>${date}</span>
+                    </div>
+                  </div>
+                </div>
+              `);
+            }
+
+            // Example usage
+            for (let i = 0; i < 10; i++) {
+              generateCard(
+                "public/images/client.png",
+                "Orun-sunny",
+                "public/images/client2.png",
+                "Client",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, eligendi!",
+                "1/2",
+                "12+",
+                "15",
+                "25",
+                "30-12-2022"
+              );
+            }
+          </script>
+        </div>
+      </div>
+      <!-- Parent Card 05 -->
+      <div class="card-wrapper">
+        <div class="card-wrapper-header flex-between">
+          <h4>Completed</h4>
+          <div class="count">10</div>
+        </div>
+        <div class="card-list-wrapper">
+          <!-- Generate cards dynamically -->
+          <script>
+            // Function to generate a card with given data
+            function generateCard(
+              clientImage,
+              clientName,
+              userImage,
+              userName,
+              taskDetails,
+              taskCount,
+              memberCount,
+              messageCount,
+              attachmentCount,
+              date
+            ) {
+              document.write(`
+                <div class="card">
+                  <div class="card-header flex-between">
+                    <div class="client flex-center">
+                      <img src="${clientImage}" class="avatar" alt="persion-1"/>
+                      <h5>${clientName}</h5>
+                    </div>
+                    <div class="user flex-center">
+                      <img src="${userImage}" class="avatar" alt="persion-1"/>
+                      <h5>${userName}</h5>
+                    </div>
+                  </div>
+                  <div class="card-body flex-between">
+                    <div class="task-details flex-center">
+                      <img src="public/images/stack.svg" alt="" />
+                      <span>${taskDetails}</span>
+                    </div>
+                    <div class="task-count flex-center">
+                      <img src="public/images/task.svg" alt="" />
+                      <span>${taskCount}</span>
+                    </div>
+                  </div>
+                  <div class="card-footer flex-between">
+                    <div class="flex-center">
+                      <img src="${clientImage}" class="avatar" alt="" />
+                      <img src="${userImage}" class="avatar" alt="" />
+                      <span class="avatar member-count flex-center">${memberCount}</span>
+                    </div>
+                    <div class="message flex-center">
+                      <img src="public/images/chat.svg" alt="" />
+                      <span>${messageCount}</span>
+                    </div>
+                    <button class="flex-center attachmentup-btn">
+                      <img src="public/images/paper-clip.svg" alt="" />
+                      <span>${attachmentCount}</span>
+                    </button>
+                    <div class="date flex-center">
+                      <img src="public/images/calender.svg" alt="" />
+                      <span>${date}</span>
+                    </div>
+                  </div>
+                </div>
+              `);
+            }
+
+            // Example usage
+            for (let i = 0; i < 10; i++) {
+              generateCard(
+                "public/images/client.png",
+                "Orun-sunny",
+                "public/images/client2.png",
+                "Client",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, eligendi!",
+                "1/2",
+                "12+",
+                "15",
+                "25",
+                "30-12-2022"
+              );
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal">
+      <div class="modal-body">
+        <div class="modal-content">
+          <form id="uploadForm">
+            <!-- Input for multiple attachments -->
+            <input type="file" name="attachments" id="files" multiple />
+            <!-- Upload button -->
+            <button type="submit">Upload</button>
+          </form>
+          <!-- <h5>Uploaded Files: </h5> -->
+          <ol id="fileList"></ol>
+        </div>
+      </div>
+    </div>
+    <!-- Seripts file -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

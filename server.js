@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, '/')))
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, 'public/attachment'))
+        cb(null, path.join(__dirname, 'public/file'))
     },
     filename: function (req, file, cb) {
         const uniqueSuffix = Date.now();
