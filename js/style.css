@@ -25,16 +25,8 @@ body {
   background-color: #006fbb;
 }
 
-.incomplete-icon {
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
+.todo {
+  padding-top: 7px;
 }
 
 .flex-between {
